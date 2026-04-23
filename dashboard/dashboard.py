@@ -14,8 +14,8 @@ st.markdown("Dashboard ini menampilkan hasil analisis data penyewaan sepeda berd
 # --- LOAD DATA ---
 @st.cache_data
 def load_data():
-    # Menggunakan file yang sudah dibersihkan
-    df = pd.read_csv("main_data.csv")
+    # Mengarahkan path ke dalam folder dashboard
+    df = pd.read_csv("dashboard/main_data.csv") 
     df['dteday'] = pd.to_datetime(df['dteday'])
     return df
 
